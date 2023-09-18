@@ -1,38 +1,213 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body{
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f6f6f647;
+  /* background: url("./assets/bg.jpg"), #f6f6f647; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
   min-height: 100vh;
+  overflow-x: hidden;
+
+}
+
+.recupItem{
+  padding: 6px;
+  align-items: center;
+}
+.recupItem p{
+  margin-bottom: 0 !important;
+}
+
+.recupItemTitle{
+  font-weight: 600;
+  font-size: 15px;
+}
+.paiement-title{
+  font-size: 17px;
+
+}
+
+.recupItemText{
+  text-align: end;
+  font-size: 15px;
+
+}
+
+.paiementMenu{
+  /* border: 1px solid #4a9db9a8; */
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transform: height 2s  ;
+
+}
+
+.active-menu{
+  /* width: 70px;
+  height: 70px; */
+  
+
+}
+
+.paiementMenu:hover{
+  color: #024b63;
+}
+
+.selecticon{
+  /* color: red !important; */
+
+}
+
+.money-bx{
+  margin-bottom: 15px;
+}
+
+.money-bx img {
+  margin: 0px 6px;
+}
+
+.title{
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.content{
+  margin-top: 3rem;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(25px);
+
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    background: #024b63;
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.footer-text{
+  color: white;
+  text-align: center;
+  margin-bottom: 0 !important;
+}
+
+.info{
+  min-height: 50%;
+  height: 500px;
+  position: relative;
+  min-width: 350px;
+  box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+  border: 1px solid rgba(255,255,255,0.5);
+  border-right: 1px solid rgba(255,255,255,0.2);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  z-index: 10;
+  padding: 20px;
+  transition: width 1s linear;
+
+}
+.pay-action{
+  min-height: 50vh;
+  padding: 20px 0;
+  margin-bottom: 3rem;
+  transition: width 1s linear;
+
+}
+
+.paiementMode{
+    border: 1px solid #024b63;
+    border-radius: 16px;
+    min-height: 50vh;
+    padding: 10px;
+}
+
+/* custom input */
+
+.custom-input{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+}
+.custom-input input{
+  padding: 6px;
+    border: 1px solid #80808061;
+    border-radius: 5px;
+    outline: none;
+}
+
+.submit-btn{
+  background-color: #024b63;
   color: white;
+  border: none;
+  outline: center;
+  width: 100%;
+  margin-top: 1.7rem;
+  padding: 6px 0 ;
+  border-radius: 4px;
 }
 
-.App-link {
-  color: #61dafb;
+.page-content{
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 704px) {
+  .page-content{
+    flex-direction: column;
+    align-items: center;
+    margin: 0px !important;
   }
-  to {
-    transform: rotate(360deg);
+
+  .info{
+    min-width: 70%;
+
   }
+  .pay-action{
+    min-width: 70%;
+
+    background-color: #fff !important;
+    border-radius: 10px;
+    
+  }
+}
+
+@media screen and (max-width: 454px){
+
+  .info{
+    min-width: 85%;
+
+  }
+  .pay-action{
+    min-width: 85%;
+
+    background-color: #fff !important;
+    border-radius: 10px;
+    
+  }
+
+}
+
+@media screen and (max-width: 380px){
+ .recupItem{
+  flex-direction: column;
+ }
+
+ .recupItem div{
+  width: 100% !important;
+ }
+
+ .recupItem .recupItemText{
+  text-align: start;
+  margin-top: 10px;
+ }
 }
